@@ -21,7 +21,7 @@ jobs:
           java-version: '17'
           distribution: 'microsoft'
 
-      - name: Build with Maven (run tests)
+      - name: Build with Maven (skip tests)
         run: mvn clean install
         working-directory: demo
 
@@ -49,3 +49,4 @@ jobs:
           slot-name: 'Production'
           package: '*.jar'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A77CC28CD8264859A54E5F60298482EE }}
+
